@@ -1,0 +1,55 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Sep 10, 2019, 2:20:44 PM
+    Author     : hanas_bp
+*/
+
+* {  
+    font-family: Segoe UI;
+}
+
+#form {
+    background-color: #f2f2f2;
+    width: 90%;
+    height: 600px;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+    margin: auto;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: blue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: dodgerblue;
+}

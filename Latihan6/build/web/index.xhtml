@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>My Web For Ajax</title>
+        <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <h:form id="contact">
+                <h3>My Form</h3>
+                <h4>My Form for Contact</h4>
+                
+                <fieldset>
+                    <h:outputText value="Firstname"/>
+                    <h:inputText id="fname" value="#{dataUser.fname}"></h:inputText>
+                </fieldset>
+                
+                <fieldset>
+                    <h:outputText value="Lastname"/>
+                    <h:inputText id="lname" value="#{dataUser.lname}"></h:inputText>
+                </fieldset>
+                
+                <fieldset>
+                    <h:outputText value="Address"/>
+                    <h:inputText id="addres" value="#{dataUser.address}"></h:inputText>
+                </fieldset>
+                
+                <fieldset>
+                    <h:outputText value="Phone"/>
+                    <h:inputText id="phone" value="#{dataUser.phone}"></h:inputText>
+                </fieldset>
+                
+                <fieldset>
+                    <h:outputText value="Comment" />
+                    <h:inputTextarea id="comment" value="#{dataUser.comment}"></h:inputTextarea>
+                </fieldset>
+                
+                <fieldset>
+                    <h:commandButton value="Without Ajax" class="btn" onclick="show"/>
+                </fieldset>
+                
+                <fieldset>
+                    <h:commandButton value="With Ajax" class="btn">
+                        <f:ajax execute="fname" render="message1"/>
+                        <f:ajax execute="lname" render="message2"/>
+                        <f:ajax execute="addres" render="message3"/>
+                        <f:ajax execute="phone" render="message4"/>
+                        <f:ajax execute="comment" render="message5"/>
+                    </h:commandButton>
+                </fieldset>
+                
+                <h2 id="show">
+                    <h:outputText id="message1" value="#{dataUser.fname}"/><br/><br/>
+                    <h:outputText id="message2" value="#{dataUser.lname}"/><br/><br/>
+                    <h:outputText id="message3" value="#{dataUser.address}"/><br/><br/>
+                    <h:outputText id="message4" value="#{dataUser.phone}"/><br/><br/>
+                    <h:outputText id="message5" value="#{dataUser.comment}"/><br/><br/>
+                </h2>
+                
+            </h:form>
+        </div>
+    </h:body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

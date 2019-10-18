@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Login</title>
+        <link href="resources/css/sb-admin.css" rel="stylesheet"/>
+        <link href="resources/css/sb-admin.min.css" rel="stylesheet"/>
+    </h:head>
+    <h:body class="bg-info">
+        <div class="container">
+            <div class="card card-login mx-auto mt-5">
+              <div class="card-header">Login</div>
+              <div class="card-body">
+                <h:form>
+                  <div class="form-group">
+                    <div class="form-label-group">
+                        <h:inputText value="#{login2.username}" id="inputEmail" class="form-control" required="required"/>
+                      <h:outputText value="USERNAME"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="form-label-group">
+                        <h:inputSecret value="#{login2.password}" id="inputPassword" class="form-control" required="required"/>
+                      <h:outputText value="PASSWORD"/>
+                    </div>
+                  </div>
+                  
+                    <h:commandButton value="LOGIN" class="btn btn-primary btn-block" action="#{login2.login()}" />
+                    <h:outputText class="failed" value="#{login2.message}"/>
+                </h:form>
+                <div class="text-center">
+                  <a class="d-block small mt-3" href="register.html">Register an Account</a>
+                  <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+

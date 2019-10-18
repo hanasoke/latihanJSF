@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Templating</title>
+    </h:head>
+    <h:body>
+        <table border="0" align="top" width="100%" style="position: relative; height: 80px; 
+            background-color: chartreuse;">
+            <tr>
+                <td align="center">
+                    <p style="font-size: 38pt; color: black;
+                       font-family: serif;">Templating</p>
+                </td>
+            </tr>            
+        </table>
+        <table border="0" align="top" width="100%" style="position: relative; height: 80px; 
+            background-color: chartreuse;">
+            <td style="font-size: large;" align="center">
+            <hr/>
+                <h:form>
+                    <h:commandLink style="font-family: serif;" action="index" value="Beranda"></h:commandLink>
+                    <br/><br/>
+                    <h:commandLink style="font-family: serif;" action="index" value="ui:insert"></h:commandLink>
+                    <br/><br/>
+                    <h:commandLink style="font-family: serif;" action="index" value="ui:competition"></h:commandLink>
+                    <br/><br/>
+                    <h:commandLink style="font-family: serif;" action="index" value="ui:define"></h:commandLink>
+                    <br/><br/>
+                     <h:commandLink style="font-family: serif;" action="index" value="ui:decorate"></h:commandLink>
+                    <br/><br/>
+                </h:form>
+            </td>
+            <td width="45%" align="top" bgcolor="white" height="240px">
+                <br/><br/><hr/>
+                <ui:insert name="body"/>Area beranda yang bisa diedit
+                <br/><br/>
+                <ui:insert name="extended"/>Area beranda yang bisa diedit
+            </td>
+        </table>
+        <table border="0" align="top" width="100%" style="height: 40px;background-color: chartreuse;">
+            <tr>
+                <td align="center">My Templating</td>
+            </tr>            
+        </table>
+    </h:body>
+</html>
+

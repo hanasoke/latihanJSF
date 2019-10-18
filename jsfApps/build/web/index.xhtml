@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Halaman Form</title>
+        
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="resources/css/bootstrap.css"/>
+
+        <!-- My Css -->
+        <link rel="stylesheet" href="resources/css/style.css"/>
+        
+        <h:outputScript library="js" name="jquery-3.4.1.min.js"/>
+        <h:outputScript library="js" name="popper.min.js"/>
+        <h:outputScript library="js" name="bootstrap.js"/>
+        
+    </h:head>
+    <h:body>
+        
+        <div class="container">
+            <div class="row">
+              <!-- Awal Card -->
+              <div class="card mt-5 mx-auto">
+                <div class="card-header text-center text-monospace">
+                  Send Us A Message
+                </div>
+                <div class="card-body">
+                  <!-- Awal Form -->
+                  <h:form>
+                    <div class="form-group">
+                      <h:outputText value="Name"/>
+                      <div class="form-row">
+                          <div class="col">
+                              <h:inputText value="#{pesan2.firstName}" class="form-control"/>
+                          </div>
+                          <div class="col">
+                              <h:inputText value="#{pesan2.lastName}" class="form-control"/>
+                          </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <h:outputText value="Email"/>
+                      <h:inputText value="#{pesan2.email}" class="form-control"/>
+                      <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <h:outputText value="Phone Number"/>
+                      <h:inputText value="#{pesan2.phone}" class="form-control"/>
+                      <small id="helpId" class="text-muted">We'll never share phone number with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                      <h:outputText value="Message"/>
+                      <h:inputText value="#{pesan2.message}" class="form-control"/>
+                    </div>
+                    <h:commandButton class="btn btn-primary btn-block text-white" value="Submit" action="hasilPesan.xhtml"/>
+                  </h:form>
+                  <!-- Akhir Form -->
+                </div>
+              </div>
+              <!-- Akhir Card -->
+            </div>
+        </div>
+    </h:body>
+</html>
+

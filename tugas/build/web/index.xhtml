@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Form Login</title>
+        <h:outputStylesheet library="css" name="style.css"/>
+        <h:outputScript library="js" name="script.js"/>
+    </h:head>
+    <h:body>
+        <h1>Form Registrasi</h1>
+        <h:form id="form">
+            <h:outputText value="Nama"/>&nbsp;
+            <h:inputText id="valueNama"/>
+            
+            <h:outputText value="Tempat Lahir"/>&nbsp;
+            <h:inputText id="valuePlace"/>
+            
+            <h:outputText value="Tanggal Lahir"/>&nbsp;
+            <h:inputText id="valueBirth"/>
+            
+            <h:outputText value="Alamat"/>&nbsp;
+            <h:inputText id="valueAddress"/>
+            
+            <h:outputText value="Email"/>&nbsp;
+            <h:inputText id="valueEmail"/>
+            
+            <h:outputText value="Jurusan"/>&nbsp;
+            <h:inputText id="valueMajor"/>
+            
+            <h:commandButton value="Submit" onclick="klikSubmit()"/>
+            
+        </h:form>
+        
+    </h:body>
+</html>
+

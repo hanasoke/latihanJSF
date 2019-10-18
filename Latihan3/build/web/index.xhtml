@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>LOGIN</title>
+        <link href="css/sb-admin.css" rel="stylesheet"/>
+        <link href="css/sb-admin.min.css" rel="stylesheet"/>
+    </h:head>
+    <h:body class="bg-dark">
+        <div class="container">
+            <div class="card card-login mx-auto mt-5">
+                <div class="card-header">Login</div>
+                <div class="card-body">
+                    <h:form>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <h:inputText id="inputEmail" class="form-control" value="#{login1.username}"/>
+                                <h:outputText value="USERNAME"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-label-group">
+                                <h:inputSecret id="inputPassword" class="form-control" value="#{login1.password}"/>
+                                <h:outputText value="PASSWORD"/>
+                            </div>
+                        </div>
+                        
+                        <h:commandButton class="btn btn-primary btn-block" value="LOGIN" action="#{login1.login()}"/><br/>
+                        <div class="text">
+                        <h:outputText id="text" value="#{login1.massage}"/>
+                        </div>
+                    </h:form>
+                  
+                </div>
+            </div>
+        </div>
+    </h:body>
+</html>
+
